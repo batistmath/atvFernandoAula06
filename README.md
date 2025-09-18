@@ -63,12 +63,30 @@ Antes de tudo, o servidor precisa saber qual é o seu próprio endereço de IP n
 
 #### Na Máquina CLIENTE
 
-1.  **Copie os Arquivos Compilados:**
-    * Você precisa dos arquivos `.class` gerados na máquina servidora. A maneira mais simples é copiar a pasta inteira do projeto (já com os arquivos `.class` dentro) da máquina do servidor para a máquina do cliente.
+1.  **Atualize o Código-Fonte:**
+    * Abra o arquivo `IniciaServidor.java`.
+    * Encontre a linha a seguir:
+        ```java
+        System.setProperty("java.rmi.server.hostname", "COLOQUE_SEU_IP_AQUI");
+        ```
+    * Substitua `"COLOQUE_SEU_IP_AQUI"` pelo endereço de IP que você encontrou no passo anterior.
 
-2.  **Abra um terminal** na pasta que você acabou de copiar.
+    **Exemplo:** Se o seu IP for `10.40.134.106`, a linha deverá ficar assim:
+    ```java
+    System.setProperty("java.rmi.server.hostname", "10.40.134.106");
+    ```
+    * Salve o arquivo.
 
-3.  **Execute o Cliente,** passando o IP do servidor como um argumento de linha de comando:
+---
+
+2.  **Compile todos os arquivos** Java com o seguinte comando:
+    ```bash
+    javac *.java
+    ```
+
+3.  **Abra um terminal** na pasta que você acabou de copiar.
+
+44.  **Execute o Cliente,** passando o IP do servidor como um argumento de linha de comando:
     ```bash
     java Cliente <IP_DA_MAQUINA_SERVIDOR>
     ```
