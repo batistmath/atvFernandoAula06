@@ -79,30 +79,6 @@ public class Cliente {
                 break;
                 }
             } while (opcao != 0);
-            
-
-
-            /*System.out.println("Conectado à TV. Enviando comandos...");
-            System.out.println("\n--- STATUS INICIAL: " + controle.consultarStatus());
-
-            controle.ligarDesligar();
-            System.out.println("--- STATUS após ligar: " + controle.consultarStatus());
-
-            controle.aumentarVolume();
-            controle.aumentarVolume();
-            System.out.println("--- STATUS após aumentar volume: " + controle.consultarStatus());
-
-            controle.trocarCanal(10);
-            System.out.println("--- STATUS após trocar canal: " + controle.consultarStatus());
-
-            controle.silenciar();
-            System.out.println("--- STATUS após silenciar: " + controle.consultarStatus());
-
-            controle.silenciar();
-            System.out.println("--- STATUS após dessilenciar: " + controle.consultarStatus());
-
-            controle.ligarDesligar();
-            System.out.println("--- STATUS FINAL: " + controle.consultarStatus());*/
 
         } catch (Exception e) {
             System.err.println("Erro no Cliente: " + e.toString());
