@@ -5,7 +5,7 @@
         public static void main(String[] args) {
             try {
 
-                System.setProperty("java.rmi.server.hostname", "127.0.0.1"); 
+                System.setProperty("java.rmi.server.hostname", "COLOQUE_SEU_IP_AQUI"); 
 
                 Controle tv = new Servidor();
                 Registry registro = LocateRegistry.createRegistry(1099);
